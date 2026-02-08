@@ -66,11 +66,12 @@ else {
     cout << "Age        : " << age << endl;
     cout << "Gender     : " << gender << endl;
     cout << "Status     : Valid" << endl;
-    cout << "Gevornrate : " << getGovernorate(code); 
+    cout << "Gevornrate : " << getGovernorate(code) << endl; 
     cout << "=============================\n";
 }
 
 int main() {
+    GEVORNRATE();
     string id;
 while (true) 
 {
@@ -78,8 +79,12 @@ cout << "Enter National ID (14 digits): ";
 cin >> id;
 if (id.length() == 14 && allDigits(id))
 {
+    NATIONALID(id);
      break;
 }
-NATIONALID(id);
+else 
+{
+    cout << "Try again.\n";
+}
 }
 }
