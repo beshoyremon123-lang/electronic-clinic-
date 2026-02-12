@@ -49,6 +49,34 @@ void NATIONALID(string id) {
 
 int month = (id[3]-'0')*10 + (id[4]-'0');
 int day   = (id[5]-'0')*10 + (id[6]-'0');
+if (month < 1 || month > 12)
+{
+    cout << "Wrong month !! " << endl;
+    return;
+}
+if (day < 1)
+{
+    cout << "Wrong day !! " << endl;
+    return;
+}
+int days_m;
+if (month == 2)
+{
+    days_m = 28;
+}
+else if (month == 4 || month == 9 || month == 6 || month == 11)
+{
+    days_m = 30;
+}
+else
+{
+    days_m = 31;
+}
+if (day > days_m)
+{
+    cout << "Wrong day !! " << endl;
+    return;
+}
 int age = 2026 - year;
 int code = (id[7]-'0')*10 + (id[8]-'0');
 string gender;
