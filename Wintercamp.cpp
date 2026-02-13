@@ -46,7 +46,12 @@ void NATIONALID(string id) {
         cout << "Status : Invalid\n";
         return;
     }
+int currentYear = 2026;
 
+if (year > currentYear) {
+    cout << "Invalid year !!" << endl;
+    return;
+}
 int month = (id[3]-'0')*10 + (id[4]-'0');
 int day   = (id[5]-'0')*10 + (id[6]-'0');
 if (month < 1 || month > 12)
